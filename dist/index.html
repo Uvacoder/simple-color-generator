@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background colour changer</title>
+
+    <style>
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        transition: background 0.5s ease;
+      }
+
+      .btns {
+        padding-top: 3rem;
+      }
+
+      .btn {
+        all: unset;
+        background: rgb(32, 32, 32);
+        box-shadow: 0 0px 3.6px rgba(0, 0, 0, 0.078),
+          0 0px 10px rgba(0, 0, 0, 0.091), 0 0px 24.1px rgba(0, 0, 0, 0.107),
+          0 0px 80px rgba(0, 0, 0, 0.2);
+        padding: 0.8rem 2rem;
+        color: white;
+        font-family: inherit;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+
+      .btn:active {
+        background: rgb(12, 12, 12);
+      }
+
+      .style {
+        background: white;
+        width: max-content;
+        height: max-content;
+        padding: 0.8rem 2rem;
+        margin-top: 1rem;
+        color: black;
+      }
+
+      .title {
+        text-transform: uppercase;
+        font-size: 2rem;
+        margin: 0;
+        color: rgb(24, 24, 24);
+      }
+
+      .title span {
+        font-weight: 100;
+      }
+
+      .subtitle {
+        margin: 0;
+        font-weight: 100;
+        /* padding-top: 0.8rem; */
+        /* letter-spacing: 2px; */
+      }
+
+      .subtitle span a {
+        display: inline-block;
+        background: rgb(24, 24, 24);
+        padding: 0.5rem 1.3rem;
+        color: white;
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 class="title">Colour Generator - <span>Project 001</span></h2>
+    <h3 class="subtitle">
+      Made by
+      <span
+        ><a href="https://twitter.com/williams_codes" id="link"
+          >Williams Samuel</a
+        ></span
+      >
+    </h3>
+    <div class="btns">
+      <button id="rgb-btn" class="btn">Generate RGB</button>
+      <button id="color-btn" class="btn">Generate NAMED COLORS</button>
+      <button id="hsl-btn" class="btn">Generate HSL</button>
+      <button id="hex-btn" class="btn">Generate HEX</button>
+    </div>
+
+    <div class="style" id="name"></div>
+    <div class="style" id="rgb"></div>
+    <div class="style" id="hex"></div>
+    <div class="style" id="hsl"></div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
